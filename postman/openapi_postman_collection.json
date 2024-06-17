@@ -1,0 +1,2525 @@
+{
+    "info": {
+        "name": "openapi",
+        "description": "OpenAI API: The OpenAI REST API. Please see https://platform.openai.com/docs/api-reference for more details.",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Chat",
+            "item": [
+                {
+                    "name": "Creates a model response for the given chat conversation.",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{}"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/chat/completions",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "chat",
+                                "completions"
+                            ]
+                        },
+                        "description": ""
+                    }
+                }
+            ],
+            "description": "Given a list of messages comprising a conversation, the model will return a response."
+        },
+        {
+            "name": "Completions",
+            "item": [
+                {
+                    "name": "Creates a completion for the provided prompt and parameters.",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{}"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/completions",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "completions"
+                            ]
+                        },
+                        "description": ""
+                    }
+                }
+            ],
+            "description": "Given a prompt, the model will return one or more predicted completions, and can also return the probabilities of alternative tokens at each position."
+        },
+        {
+            "name": "Images",
+            "item": [
+                {
+                    "name": "Creates an image given a prompt.",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{}"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/images/generations",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "images",
+                                "generations"
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Creates an edited or extended image given an original image and a prompt.",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "multipart/form-data",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": []
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/images/edits",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "images",
+                                "edits"
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Creates a variation of a given image.",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "multipart/form-data",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": []
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/images/variations",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "images",
+                                "variations"
+                            ]
+                        },
+                        "description": ""
+                    }
+                }
+            ],
+            "description": "Given a prompt and/or an input image, the model will generate a new image."
+        },
+        {
+            "name": "Embeddings",
+            "item": [
+                {
+                    "name": "Creates an embedding vector representing the input text.",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{}"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/embeddings",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "embeddings"
+                            ]
+                        },
+                        "description": ""
+                    }
+                }
+            ],
+            "description": "Get a vector representation of a given input that can be easily consumed by machine learning models and algorithms."
+        },
+        {
+            "name": "Audio",
+            "item": [
+                {
+                    "name": "Generates audio from the input text.",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/octet-stream",
+                                "type": "string"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{}"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/audio/speech",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "audio",
+                                "speech"
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Transcribes audio into the input language.",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "multipart/form-data",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": []
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/audio/transcriptions",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "audio",
+                                "transcriptions"
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Translates audio into English.",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "multipart/form-data",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": []
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/audio/translations",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "audio",
+                                "translations"
+                            ]
+                        },
+                        "description": ""
+                    }
+                }
+            ],
+            "description": "Turn audio into text or text into audio."
+        },
+        {
+            "name": "Files",
+            "item": [
+                {
+                    "name": "Returns a list of files that belong to the user's organization.",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/files",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "files"
+                            ],
+                            "query": [
+                                {
+                                    "key": "purpose",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Upload a file that can be used across various endpoints. Individual files can be up to 512 MB, and the size of all files uploaded by one organization can be up to 100 GB.\n\nThe Assistants API supports files up to 2 million tokens and of specific file types. See the [Assistants Tools guide](/docs/assistants/tools) for details.\n\nThe Fine-tuning API only supports `.jsonl` files. The input also has certain required formats for fine-tuning [chat](/docs/api-reference/fine-tuning/chat-input) or [completions](/docs/api-reference/fine-tuning/completions-input) models.\n\nThe Batch API only supports `.jsonl` files up to 100 MB in size. The input also has a specific required [format](/docs/api-reference/batch/request-input).\n\nPlease [contact us](https://help.openai.com/) if you need to increase these storage limits.\n",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "multipart/form-data",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": []
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/files",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "files"
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Delete a file.",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/files/{file_id}",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "files",
+                                ":file_id"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "file_id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Returns information about a specific file.",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/files/{file_id}",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "files",
+                                ":file_id"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "file_id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Returns the contents of the specified file.",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/files/{file_id}/content",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "files",
+                                ":file_id",
+                                "content"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "file_id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                }
+            ],
+            "description": "Files are used to upload documents that can be used with features like Assistants and Fine-tuning."
+        },
+        {
+            "name": "Fine-tuning",
+            "item": [
+                {
+                    "name": "Creates a fine-tuning job which begins the process of creating a new model from a given dataset.\n\nResponse includes details of the enqueued job including job status and the name of the fine-tuned models once complete.\n\n[Learn more about fine-tuning](/docs/guides/fine-tuning)\n",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{}"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/fine_tuning/jobs",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "fine_tuning",
+                                "jobs"
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "List your organization's fine-tuning jobs\n",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/fine_tuning/jobs",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "fine_tuning",
+                                "jobs"
+                            ],
+                            "query": [
+                                {
+                                    "key": "after",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "limit",
+                                    "value": {
+                                        "Value": 20
+                                    },
+                                    "type": "integer"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Get info about a fine-tuning job.\n\n[Learn more about fine-tuning](/docs/guides/fine-tuning)\n",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/fine_tuning/jobs/{fine_tuning_job_id}",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "fine_tuning",
+                                "jobs",
+                                ":fine_tuning_job_id"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "fine_tuning_job_id",
+                                    "value": "ft-AF1WoRqd3aJAHsqc9NY7iL8F",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Get status updates for a fine-tuning job.\n",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/fine_tuning/jobs/{fine_tuning_job_id}/events",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "fine_tuning",
+                                "jobs",
+                                ":fine_tuning_job_id",
+                                "events"
+                            ],
+                            "query": [
+                                {
+                                    "key": "after",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "limit",
+                                    "value": {
+                                        "Value": 20
+                                    },
+                                    "type": "integer"
+                                }
+                            ],
+                            "variable": [
+                                {
+                                    "key": "fine_tuning_job_id",
+                                    "value": "ft-AF1WoRqd3aJAHsqc9NY7iL8F",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Immediately cancel a fine-tune job.\n",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/fine_tuning/jobs/{fine_tuning_job_id}/cancel",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "fine_tuning",
+                                "jobs",
+                                ":fine_tuning_job_id",
+                                "cancel"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "fine_tuning_job_id",
+                                    "value": "ft-AF1WoRqd3aJAHsqc9NY7iL8F",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "List checkpoints for a fine-tuning job.\n",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/fine_tuning/jobs/{fine_tuning_job_id}/checkpoints",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "fine_tuning",
+                                "jobs",
+                                ":fine_tuning_job_id",
+                                "checkpoints"
+                            ],
+                            "query": [
+                                {
+                                    "key": "after",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "limit",
+                                    "value": {
+                                        "Value": 10
+                                    },
+                                    "type": "integer"
+                                }
+                            ],
+                            "variable": [
+                                {
+                                    "key": "fine_tuning_job_id",
+                                    "value": "ft-AF1WoRqd3aJAHsqc9NY7iL8F",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                }
+            ],
+            "description": "Manage fine-tuning jobs to tailor a model to your specific training data."
+        },
+        {
+            "name": "Models",
+            "item": [
+                {
+                    "name": "Lists the currently available models, and provides basic information about each one such as the owner and availability.",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/models",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "models"
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Retrieves a model instance, providing basic information about the model such as the owner and permissioning.",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/models/{model}",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "models",
+                                ":model"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "model",
+                                    "value": "gpt-3.5-turbo",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Delete a fine-tuned model. You must have the Owner role in your organization to delete a model.",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/models/{model}",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "models",
+                                ":model"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "model",
+                                    "value": "ft:gpt-3.5-turbo:acemeco:suffix:abc123",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                }
+            ],
+            "description": "List and describe the various models available in the API."
+        },
+        {
+            "name": "Moderations",
+            "item": [
+                {
+                    "name": "Classifies if text is potentially harmful.",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{}"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/moderations",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "moderations"
+                            ]
+                        },
+                        "description": ""
+                    }
+                }
+            ],
+            "description": "Given a input text, outputs if the model classifies it as potentially harmful."
+        },
+        {
+            "name": "Assistants",
+            "item": [
+                {
+                    "name": "Returns a list of assistants.",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/assistants",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "assistants"
+                            ],
+                            "query": [
+                                {
+                                    "key": "limit",
+                                    "value": {
+                                        "Value": 20
+                                    },
+                                    "type": "integer"
+                                },
+                                {
+                                    "key": "order",
+                                    "value": {
+                                        "Value": "desc"
+                                    },
+                                    "type": "enum"
+                                },
+                                {
+                                    "key": "after",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "before",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Create an assistant with a model and instructions.",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{}"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/assistants",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "assistants"
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Retrieves an assistant.",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/assistants/{assistant_id}",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "assistants",
+                                ":assistant_id"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "assistant_id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Modifies an assistant.",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{}"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/assistants/{assistant_id}",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "assistants",
+                                ":assistant_id"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "assistant_id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Delete an assistant.",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/assistants/{assistant_id}",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "assistants",
+                                ":assistant_id"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "assistant_id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Create a thread.",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{}"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/threads",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "threads"
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Retrieves a thread.",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/threads/{thread_id}",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "threads",
+                                ":thread_id"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "thread_id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Modifies a thread.",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{}"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/threads/{thread_id}",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "threads",
+                                ":thread_id"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "thread_id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Delete a thread.",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/threads/{thread_id}",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "threads",
+                                ":thread_id"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "thread_id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Returns a list of messages for a given thread.",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/threads/{thread_id}/messages",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "threads",
+                                ":thread_id",
+                                "messages"
+                            ],
+                            "query": [
+                                {
+                                    "key": "limit",
+                                    "value": {
+                                        "Value": 20
+                                    },
+                                    "type": "integer"
+                                },
+                                {
+                                    "key": "order",
+                                    "value": {
+                                        "Value": "desc"
+                                    },
+                                    "type": "enum"
+                                },
+                                {
+                                    "key": "after",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "before",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "run_id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ],
+                            "variable": [
+                                {
+                                    "key": "thread_id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Create a message.",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{}"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/threads/{thread_id}/messages",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "threads",
+                                ":thread_id",
+                                "messages"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "thread_id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Retrieve a message.",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/threads/{thread_id}/messages/{message_id}",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "threads",
+                                ":thread_id",
+                                "messages",
+                                ":message_id"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "thread_id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "message_id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Modifies a message.",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{}"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/threads/{thread_id}/messages/{message_id}",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "threads",
+                                ":thread_id",
+                                "messages",
+                                ":message_id"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "thread_id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "message_id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Deletes a message.",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/threads/{thread_id}/messages/{message_id}",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "threads",
+                                ":thread_id",
+                                "messages",
+                                ":message_id"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "thread_id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "message_id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Create a thread and run it in one request.",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{}"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/threads/runs",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "threads",
+                                "runs"
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Returns a list of runs belonging to a thread.",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/threads/{thread_id}/runs",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "threads",
+                                ":thread_id",
+                                "runs"
+                            ],
+                            "query": [
+                                {
+                                    "key": "limit",
+                                    "value": {
+                                        "Value": 20
+                                    },
+                                    "type": "integer"
+                                },
+                                {
+                                    "key": "order",
+                                    "value": {
+                                        "Value": "desc"
+                                    },
+                                    "type": "enum"
+                                },
+                                {
+                                    "key": "after",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "before",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ],
+                            "variable": [
+                                {
+                                    "key": "thread_id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Create a run.",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{}"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/threads/{thread_id}/runs",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "threads",
+                                ":thread_id",
+                                "runs"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "thread_id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Retrieves a run.",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/threads/{thread_id}/runs/{run_id}",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "threads",
+                                ":thread_id",
+                                "runs",
+                                ":run_id"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "thread_id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "run_id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Modifies a run.",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{}"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/threads/{thread_id}/runs/{run_id}",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "threads",
+                                ":thread_id",
+                                "runs",
+                                ":run_id"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "thread_id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "run_id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "When a run has the `status: \"requires_action\"` and `required_action.type` is `submit_tool_outputs`, this endpoint can be used to submit the outputs from the tool calls once they're all completed. All outputs must be submitted in a single request.\n",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{}"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/threads/{thread_id}/runs/{run_id}/submit_tool_outputs",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "threads",
+                                ":thread_id",
+                                "runs",
+                                ":run_id",
+                                "submit_tool_outputs"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "thread_id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "run_id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Cancels a run that is `in_progress`.",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/threads/{thread_id}/runs/{run_id}/cancel",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "threads",
+                                ":thread_id",
+                                "runs",
+                                ":run_id",
+                                "cancel"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "thread_id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "run_id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Returns a list of run steps belonging to a run.",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/threads/{thread_id}/runs/{run_id}/steps",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "threads",
+                                ":thread_id",
+                                "runs",
+                                ":run_id",
+                                "steps"
+                            ],
+                            "query": [
+                                {
+                                    "key": "limit",
+                                    "value": {
+                                        "Value": 20
+                                    },
+                                    "type": "integer"
+                                },
+                                {
+                                    "key": "order",
+                                    "value": {
+                                        "Value": "desc"
+                                    },
+                                    "type": "enum"
+                                },
+                                {
+                                    "key": "after",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "before",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ],
+                            "variable": [
+                                {
+                                    "key": "thread_id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "run_id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Retrieves a run step.",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/threads/{thread_id}/runs/{run_id}/steps/{step_id}",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "threads",
+                                ":thread_id",
+                                "runs",
+                                ":run_id",
+                                "steps",
+                                ":step_id"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "thread_id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "run_id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "step_id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                }
+            ],
+            "description": "Build Assistants that can call models and use tools."
+        },
+        {
+            "name": "Vector Stores",
+            "item": [
+                {
+                    "name": "Returns a list of vector stores.",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/vector_stores",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "vector_stores"
+                            ],
+                            "query": [
+                                {
+                                    "key": "limit",
+                                    "value": {
+                                        "Value": 20
+                                    },
+                                    "type": "integer"
+                                },
+                                {
+                                    "key": "order",
+                                    "value": {
+                                        "Value": "desc"
+                                    },
+                                    "type": "enum"
+                                },
+                                {
+                                    "key": "after",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "before",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Create a vector store.",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{}"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/vector_stores",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "vector_stores"
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Retrieves a vector store.",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/vector_stores/{vector_store_id}",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "vector_stores",
+                                ":vector_store_id"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "vector_store_id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Modifies a vector store.",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{}"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/vector_stores/{vector_store_id}",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "vector_stores",
+                                ":vector_store_id"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "vector_store_id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Delete a vector store.",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/vector_stores/{vector_store_id}",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "vector_stores",
+                                ":vector_store_id"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "vector_store_id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Returns a list of vector store files.",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/vector_stores/{vector_store_id}/files",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "vector_stores",
+                                ":vector_store_id",
+                                "files"
+                            ],
+                            "query": [
+                                {
+                                    "key": "limit",
+                                    "value": {
+                                        "Value": 20
+                                    },
+                                    "type": "integer"
+                                },
+                                {
+                                    "key": "order",
+                                    "value": {
+                                        "Value": "desc"
+                                    },
+                                    "type": "enum"
+                                },
+                                {
+                                    "key": "after",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "before",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "filter",
+                                    "value": "failed",
+                                    "type": "enum"
+                                }
+                            ],
+                            "variable": [
+                                {
+                                    "key": "vector_store_id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Create a vector store file by attaching a [File](/docs/api-reference/files) to a [vector store](/docs/api-reference/vector-stores/object).",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{}"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/vector_stores/{vector_store_id}/files",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "vector_stores",
+                                ":vector_store_id",
+                                "files"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "vector_store_id",
+                                    "value": "vs_abc123",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Retrieves a vector store file.",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/vector_stores/{vector_store_id}/files/{file_id}",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "vector_stores",
+                                ":vector_store_id",
+                                "files",
+                                ":file_id"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "vector_store_id",
+                                    "value": "vs_abc123",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "file_id",
+                                    "value": "file-abc123",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Delete a vector store file. This will remove the file from the vector store but the file itself will not be deleted. To delete the file, use the [delete file](/docs/api-reference/files/delete) endpoint.",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/vector_stores/{vector_store_id}/files/{file_id}",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "vector_stores",
+                                ":vector_store_id",
+                                "files",
+                                ":file_id"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "vector_store_id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "file_id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Create a vector store file batch.",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{}"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/vector_stores/{vector_store_id}/file_batches",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "vector_stores",
+                                ":vector_store_id",
+                                "file_batches"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "vector_store_id",
+                                    "value": "vs_abc123",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Retrieves a vector store file batch.",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/vector_stores/{vector_store_id}/file_batches/{batch_id}",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "vector_stores",
+                                ":vector_store_id",
+                                "file_batches",
+                                ":batch_id"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "vector_store_id",
+                                    "value": "vs_abc123",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "batch_id",
+                                    "value": "vsfb_abc123",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Cancel a vector store file batch. This attempts to cancel the processing of files in this batch as soon as possible.",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/vector_stores/{vector_store_id}/file_batches/{batch_id}/cancel",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "vector_stores",
+                                ":vector_store_id",
+                                "file_batches",
+                                ":batch_id",
+                                "cancel"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "vector_store_id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "batch_id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Returns a list of vector store files in a batch.",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/vector_stores/{vector_store_id}/file_batches/{batch_id}/files",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "vector_stores",
+                                ":vector_store_id",
+                                "file_batches",
+                                ":batch_id",
+                                "files"
+                            ],
+                            "query": [
+                                {
+                                    "key": "limit",
+                                    "value": {
+                                        "Value": 20
+                                    },
+                                    "type": "integer"
+                                },
+                                {
+                                    "key": "order",
+                                    "value": {
+                                        "Value": "desc"
+                                    },
+                                    "type": "enum"
+                                },
+                                {
+                                    "key": "after",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "before",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "filter",
+                                    "value": "failed",
+                                    "type": "enum"
+                                }
+                            ],
+                            "variable": [
+                                {
+                                    "key": "vector_store_id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "batch_id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Batch",
+            "item": [
+                {
+                    "name": "Creates and executes a batch from an uploaded file of requests",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "string"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{}"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/batches",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "batches"
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "List your organization's batches.",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/batches",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "batches"
+                            ],
+                            "query": [
+                                {
+                                    "key": "after",
+                                    "value": "<value>",
+                                    "type": "string"
+                                },
+                                {
+                                    "key": "limit",
+                                    "value": {
+                                        "Value": 20
+                                    },
+                                    "type": "integer"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Retrieves a batch.",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/batches/{batch_id}",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "batches",
+                                ":batch_id"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "batch_id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "Cancels an in-progress batch. The batch will be in status `cancelling` for up to 10 minutes, before changing to `cancelled`, where it will have partial results (if any) available in the output file.",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json",
+                                "type": "string"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/batches/{batch_id}/cancel",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "batches",
+                                ":batch_id",
+                                "cancel"
+                            ],
+                            "variable": [
+                                {
+                                    "key": "batch_id",
+                                    "value": "<value>",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    }
+                }
+            ],
+            "description": "Create large batches of API requests to run asynchronously."
+        }
+    ],
+    "variable": [
+        {
+            "key": "baseUrl",
+            "value": "https://api.openai.com/v1"
+        }
+    ]
+}

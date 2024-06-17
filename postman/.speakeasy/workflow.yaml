@@ -1,0 +1,13 @@
+workflowVersion: 1.0.0
+speakeasyVersion: latest
+sources:
+    OpenAI-API:
+        inputs:
+            - location: https://raw.githubusercontent.com/openai/openai-openapi/master/openapi.yaml
+        registry:
+            location: registry.speakeasyapi.dev/lukehagar/lukehagar/open-ai-api
+        output: ../OpenAI-Specification-Enhanced
+targets:
+    my-first-target:
+        target: postman
+        source: OpenAI-API

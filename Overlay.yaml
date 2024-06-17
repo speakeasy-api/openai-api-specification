@@ -1,0 +1,95 @@
+overlay: 1.0.0
+info:
+  title: Overlay ./OpenAI-Specification-original.yaml => ./OpenAI-Specification-modified.yaml
+  version: 0.0.0
+actions:
+  - target: $["components"]["schemas"]["ChatCompletionRequestSystemMessage"]["properties"]["role"]
+    update:
+      $ref: "#/components/schemas/ChatCompletionRole"
+  - target: $["components"]["schemas"]["ChatCompletionRequestSystemMessage"]["properties"]["role"]["type"]
+    remove: true
+  - target: $["components"]["schemas"]["ChatCompletionRequestSystemMessage"]["properties"]["role"]["enum"]
+    remove: true
+  - target: $["components"]["schemas"]["ChatCompletionRequestSystemMessage"]["properties"]["role"]["description"]
+    remove: true
+  - target: $["components"]["schemas"]["ChatCompletionRequestUserMessage"]["properties"]["role"]
+    update:
+      $ref: "#/components/schemas/ChatCompletionRole"
+  - target: $["components"]["schemas"]["ChatCompletionRequestUserMessage"]["properties"]["role"]["type"]
+    remove: true
+  - target: $["components"]["schemas"]["ChatCompletionRequestUserMessage"]["properties"]["role"]["enum"]
+    remove: true
+  - target: $["components"]["schemas"]["ChatCompletionRequestUserMessage"]["properties"]["role"]["description"]
+    remove: true
+  - target: $["components"]["schemas"]["ChatCompletionRequestAssistantMessage"]["properties"]["role"]
+    update:
+      $ref: "#/components/schemas/ChatCompletionRole"
+  - target: $["components"]["schemas"]["ChatCompletionRequestAssistantMessage"]["properties"]["role"]["type"]
+    remove: true
+  - target: $["components"]["schemas"]["ChatCompletionRequestAssistantMessage"]["properties"]["role"]["enum"]
+    remove: true
+  - target: $["components"]["schemas"]["ChatCompletionRequestAssistantMessage"]["properties"]["role"]["description"]
+    remove: true
+  - target: $["components"]["schemas"]["ChatCompletionRequestToolMessage"]["properties"]["role"]
+    update:
+      $ref: "#/components/schemas/ChatCompletionRole"
+  - target: $["components"]["schemas"]["ChatCompletionRequestToolMessage"]["properties"]["role"]["type"]
+    remove: true
+  - target: $["components"]["schemas"]["ChatCompletionRequestToolMessage"]["properties"]["role"]["enum"]
+    remove: true
+  - target: $["components"]["schemas"]["ChatCompletionRequestToolMessage"]["properties"]["role"]["description"]
+    remove: true
+  - target: $["components"]["schemas"]["ChatCompletionRequestFunctionMessage"]["properties"]["role"]
+    update:
+      $ref: "#/components/schemas/ChatCompletionRole"
+  - target: $["components"]["schemas"]["ChatCompletionRequestFunctionMessage"]["properties"]["role"]["type"]
+    remove: true
+  - target: $["components"]["schemas"]["ChatCompletionRequestFunctionMessage"]["properties"]["role"]["enum"]
+    remove: true
+  - target: $["components"]["schemas"]["ChatCompletionRequestFunctionMessage"]["properties"]["role"]["description"]
+    remove: true
+  - target: $["components"]["schemas"]["ChatCompletionResponseMessage"]["properties"]["role"]
+    update:
+      $ref: "#/components/schemas/ChatCompletionRole"
+  - target: $["components"]["schemas"]["ChatCompletionResponseMessage"]["properties"]["role"]["type"]
+    remove: true
+  - target: $["components"]["schemas"]["ChatCompletionResponseMessage"]["properties"]["role"]["enum"]
+    remove: true
+  - target: $["components"]["schemas"]["ChatCompletionResponseMessage"]["properties"]["role"]["description"]
+    remove: true
+  - target: $["components"]["schemas"]["ChatCompletionStreamResponseDelta"]["properties"]["role"]
+    update:
+      $ref: "#/components/schemas/ChatCompletionRole"
+  - target: $["components"]["schemas"]["ChatCompletionStreamResponseDelta"]["properties"]["role"]["type"]
+    remove: true
+  - target: $["components"]["schemas"]["ChatCompletionStreamResponseDelta"]["properties"]["role"]["enum"]
+    remove: true
+  - target: $["components"]["schemas"]["ChatCompletionStreamResponseDelta"]["properties"]["role"]["description"]
+    remove: true
+  - target: $["components"]["schemas"]["MessageObject"]["properties"]["role"]
+    update:
+      $ref: "#/components/schemas/ChatCompletionRole"
+  - target: $["components"]["schemas"]["MessageObject"]["properties"]["role"]["description"]
+    remove: true
+  - target: $["components"]["schemas"]["MessageObject"]["properties"]["role"]["type"]
+    remove: true
+  - target: $["components"]["schemas"]["MessageObject"]["properties"]["role"]["enum"]
+    remove: true
+  - target: $["components"]["schemas"]["MessageDeltaObject"]["properties"]["delta"]["properties"]["role"]
+    update:
+      $ref: "#/components/schemas/ChatCompletionRole"
+  - target: $["components"]["schemas"]["MessageDeltaObject"]["properties"]["delta"]["properties"]["role"]["description"]
+    remove: true
+  - target: $["components"]["schemas"]["MessageDeltaObject"]["properties"]["delta"]["properties"]["role"]["type"]
+    remove: true
+  - target: $["components"]["schemas"]["MessageDeltaObject"]["properties"]["delta"]["properties"]["role"]["enum"]
+    remove: true
+  - target: $["components"]["schemas"]["CreateMessageRequest"]["properties"]["role"]
+    update:
+      $ref: "#/components/schemas/ChatCompletionRole"
+  - target: $["components"]["schemas"]["CreateMessageRequest"]["properties"]["role"]["type"]
+    remove: true
+  - target: $["components"]["schemas"]["CreateMessageRequest"]["properties"]["role"]["enum"]
+    remove: true
+  - target: $["components"]["schemas"]["CreateMessageRequest"]["properties"]["role"]["description"]
+    remove: true
