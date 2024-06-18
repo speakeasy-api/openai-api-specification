@@ -4,9 +4,11 @@ sources:
     OpenAI-API:
         inputs:
             - location: https://raw.githubusercontent.com/openai/openai-openapi/master/openapi.yaml
+        overlays:
+            - location: ../Overlay.yaml
         registry:
             location: registry.speakeasyapi.dev/lukehagar/lukehagar/open-ai-api
-        output: ../OpenAI-Specification-Enhanced
+        output: ../OpenAI-Specification-Enhanced.yaml
 targets:
     my-first-target:
         target: postman

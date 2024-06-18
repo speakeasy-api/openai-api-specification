@@ -1,18 +1,18 @@
-speakeasyVersion: 1.308.1
+speakeasyVersion: 1.308.2
 sources:
     OpenAI-API:
         sourceNamespace: open-ai-api
-        sourceRevisionDigest: sha256:61d0dcd79bdb4aa301728313d296499f1b7f877015c847039a3286e245818bac
-        sourceBlobDigest: sha256:22fe5881b274ede34d009e5b03fda550ed4607c42a9b51f5be6b30d6babd7d33
+        sourceRevisionDigest: sha256:cb474c4e52c5ddcacb671e70c07b13050eda77251993c29c5daec792f9116feb
+        sourceBlobDigest: sha256:36170488d71bc173ae507f9d524022d688ee1838ffd899ac829cbf456b4bd0f8
         tags:
             - latest
 targets:
     my-first-target:
         source: OpenAI-API
         sourceNamespace: open-ai-api
-        sourceRevisionDigest: sha256:61d0dcd79bdb4aa301728313d296499f1b7f877015c847039a3286e245818bac
-        sourceBlobDigest: sha256:22fe5881b274ede34d009e5b03fda550ed4607c42a9b51f5be6b30d6babd7d33
-        outLocation: C:\Users\Luke\Documents\GitHub\openai-api-specification\postman
+        sourceRevisionDigest: sha256:cb474c4e52c5ddcacb671e70c07b13050eda77251993c29c5daec792f9116feb
+        sourceBlobDigest: sha256:36170488d71bc173ae507f9d524022d688ee1838ffd899ac829cbf456b4bd0f8
+        outLocation: /mnt/c/Users/Luke/Documents/GitHub/openai-api-specification/postman
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest
@@ -20,7 +20,9 @@ workflow:
         OpenAI-API:
             inputs:
                 - location: https://raw.githubusercontent.com/openai/openai-openapi/master/openapi.yaml
-            output: ../OpenAI-Specification-Enhanced
+            overlays:
+                - location: ../Overlay.yaml
+            output: ../OpenAI-Specification-Enhanced.yaml
             registry:
                 location: registry.speakeasyapi.dev/lukehagar/lukehagar/open-ai-api
     targets:

@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 56a8d88a-3491-4a87-9ceb-69fbf04f2026
 management:
-  docChecksum: 505a973aad75707a6f7fefc4cc7de524
-  docVersion: 2.0.0
-  speakeasyVersion: 1.303.4
-  generationVersion: 2.340.2
-  releaseVersion: 0.0.1
-  configChecksum: 86ebc1071204f49cd402879b4cd0af64
+  docChecksum: 2b65d124b1ff1f0a25a865e76f14ceea
+  docVersion: 2.1.0
+  speakeasyVersion: 1.308.2
+  generationVersion: 2.342.6
+  releaseVersion: 0.1.1
+  configChecksum: b5a80fa4e82c0ae2252191f647ec0574
 features:
   postman:
     constsAndDefaults: 0.1.0
